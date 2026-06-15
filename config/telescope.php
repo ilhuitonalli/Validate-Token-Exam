@@ -94,8 +94,6 @@ return [
 
     'middleware' => [
         'web',
-        \App\Http\Middleware\TelescopeBasicAuth::class,
-        Authorize::class,
     ],
 
     /*

@@ -1,0 +1,333 @@
+{
+  "info": {
+    "_postman_id": "40fc9877-ba4a-4520-82f3-5cb5725147cc",
+    "name": "Prueba Laravel Desarrollo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30722943"
+  },
+  "item": [
+    {
+      "name": "Valida Usuario",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{Token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://api.test.banco/api/me",
+          "protocol": "http",
+          "host": [
+            "api",
+            "test",
+            "banco"
+          ],
+          "path": [
+            "api",
+            "me"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registro",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://api.test.banco/api/register",
+          "protocol": "http",
+          "host": [
+            "api",
+            "test",
+            "banco"
+          ],
+          "path": [
+            "api",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "ilhuitonalli2310@gmail.com",
+              "type": "text",
+              "uuid": "8ed85b08-1c47-4192-844d-6c7b2af2b77e"
+            },
+            {
+              "key": "password",
+              "value": "Srv123456",
+              "type": "text",
+              "uuid": "f9a5fe4f-9d2f-4b99-89e1-7834ebfa788a"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://api.test.banco/api/login",
+          "protocol": "http",
+          "host": [
+            "api",
+            "test",
+            "banco"
+          ],
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://api.test.banco/api/logout",
+          "protocol": "http",
+          "host": [
+            "api",
+            "test",
+            "banco"
+          ],
+          "path": [
+            "api",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Refresca token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://api.test.banco/api/refresh",
+          "protocol": "http",
+          "host": [
+            "api",
+            "test",
+            "banco"
+          ],
+          "path": [
+            "api",
+            "refresh"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear token Api",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{Token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "test",
+              "type": "text",
+              "uuid": "ea21ef5b-18b3-4a9d-b71a-d5a234011c71"
+            },
+            {
+              "key": "description",
+              "value": "test",
+              "type": "text",
+              "uuid": "69a8af29-af17-4ca6-9b18-d0d24a39d8d0"
+            },
+            {
+              "key": "token",
+              "value": "asd1654a3s2d1",
+              "type": "text",
+              "uuid": "2c1cd453-dbd3-4aa2-84e1-12b92991b696"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://api.test.banco/api/keys",
+          "protocol": "http",
+          "host": [
+            "api",
+            "test",
+            "banco"
+          ],
+          "path": [
+            "api",
+            "keys"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "obtener todas Las api Keys del Usuario",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{Token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://api.test.banco/api/keys",
+          "protocol": "http",
+          "host": [
+            "api",
+            "test",
+            "banco"
+          ],
+          "path": [
+            "api",
+            "keys"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "revocar tokens api keys",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{Token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://api.test.banco/api/keys/1/revoke",
+          "protocol": "http",
+          "host": [
+            "api",
+            "test",
+            "banco"
+          ],
+          "path": [
+            "api",
+            "keys",
+            "1",
+            "revoke"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Validar Token",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{Token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "key",
+              "value": "aadc2d28711a678d01ff308e45137ab53a8a502952c5d595a7d01f3b11b9e3b9",
+              "type": "text",
+              "uuid": "f656ff84-6544-4b81-b858-0d89daf49259"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://api.test.banco/api/keys/validate",
+          "protocol": "http",
+          "host": [
+            "api",
+            "test",
+            "banco"
+          ],
+          "path": [
+            "api",
+            "keys",
+            "validate"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "Token",
+      "secret": true
+    }
+  ]
+}
